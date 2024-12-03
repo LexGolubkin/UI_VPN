@@ -13,11 +13,15 @@ tg.expand();
 // alert("Добро пожаловать в Shop");
 
 doing.addEventListener("click", () => {
-    document.getElementById("main").style.display = "none";
-    document.getElementById("form").style.display = "block";
-    document.getElementById("user_name").value = name
-    document.getElementById("user_email").value = email
-    document.getElementById("user_phone").value = phone
+    let user = window.Telegram.WebAppUser;
+    document.getElementById('user_id').innerText = user.id;
+    document.getElementById('username').innerText = user.username;
+    alert(user.id, user.username);
+    // document.getElementById("main").style.display = "none";
+    // document.getElementById("form").style.display = "block";
+    // document.getElementById("user_name").value = name
+    // document.getElementById("user_email").value = email
+    // document.getElementById("user_phone").value = phone
 });
 
 order.addEventListener("click", () => {
