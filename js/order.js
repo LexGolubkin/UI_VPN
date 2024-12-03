@@ -13,11 +13,17 @@ tg.expand();
 // alert("Добро пожаловать в Shop");
 
 doing.addEventListener("click", () => {
-    let user = tg.initData;
+    let user_query = tg.initData;       // string is URL-parameters
+    let params = URLSearchParams(user_query);
+    
+    // Get query params
+    let user = params.get('user');
+
+
     document.getElementById('user_id').innerText = user;
     console.log(user);
-    document.getElementById('username').innerText = user.username;
-    alert(user.id, user.username);
+    // document.getElementById('username').innerText = user.username;
+    alert(user);
     // document.getElementById("main").style.display = "none";
     // document.getElementById("form").style.display = "block";
     // document.getElementById("user_name").value = name
