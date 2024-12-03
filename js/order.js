@@ -15,6 +15,7 @@ tg.expand();
 doing.addEventListener("click", () => {
     let user = tg.initData;
     document.getElementById('user_id').innerText = user;
+    console.log(user);
     document.getElementById('username').innerText = user.username;
     alert(user.id, user.username);
     // document.getElementById("main").style.display = "none";
