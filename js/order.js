@@ -3,6 +3,11 @@ let tg = window.Telegram.WebApp;
 let name = "";
 let email = "";
 let phone = "";
+// ########
+let user_id = '';
+let username = '';
+let user_photo = '';
+let user_language = '';
 
 let doing = document.getElementById("doing");
 let order = document.getElementById("order");
@@ -19,10 +24,10 @@ window.addEventListener("load", () => {
     
     // Get query params
     let user = JSON.parse(decodeURIComponent(params.get('user')));
-    let user_id = user.id;
-    let username = user.username;
-    let user_photo = user.photo_url;
-    let user_language = user.language_code;
+    user_id = user.id;
+    username = user.username;
+    user_photo = user.photo_url;
+    user_language = user.language_code;
 
     var img = document.createElement("img");
     img.src = user_photo;
@@ -34,9 +39,11 @@ window.addEventListener("load", () => {
     document.getElementById('lang').innerText = user_language;
 });
 
+
 doing.addEventListener("click", () => {
     alert('Привет ' + username);
 });
+
 
 order.addEventListener("click", () => {
     name = document.getElementById("user_name").value;
