@@ -14,7 +14,7 @@ tg.expand();
 
 doing.addEventListener("click", () => {
     let user_query = tg.initData;       // string is URL-parameters
-    let params = URLSearchParams(user_query);
+    let params = new URLSearchParams(user_query);
     
     // Get query params
     let user = params.get('user');
