@@ -14,7 +14,7 @@ tg.expand();
 
 doing.addEventListener("click", () => {
     let user = window.Telegram.WebAppUser;
-    document.getElementById('user_id').innerText = tg.initData;
+    document.getElementById('user_id').innerText = tg.initData.id;
     document.getElementById('username').innerText = user.username;
     alert(user.id, user.username);
     // document.getElementById("main").style.display = "none";
