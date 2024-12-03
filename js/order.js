@@ -12,7 +12,8 @@ tg.expand();
 
 // alert("Добро пожаловать в Shop");
 
-doing.addEventListener("click", () => {
+
+window.addEventListener("load", () => {
     let user_query = tg.initData;       // string is URL-parameters
     let params = new URLSearchParams(user_query);
     
@@ -25,17 +26,15 @@ doing.addEventListener("click", () => {
 
 
     alert('Привет ' + username);
-    document.getElementById('user_id').innerText = user_id;
-    document.getElementById('username').innerText = username;
+
     var img = document.createElement("img");
     img.src = user_photo;
     var src = document.getElementById("user_photo");
     src.appendChild(img);
-    // document.getElementById("main").style.display = "none";
-    // document.getElementById("form").style.display = "block";
-    // document.getElementById("user_name").value = name
-    // document.getElementById("user_email").value = email
-    // document.getElementById("user_phone").value = phone
+
+    document.getElementById('user_id').innerText = user_id;
+    document.getElementById('username').innerText = username;
+    document.getElementById('lang').innerText = user_language;
 });
 
 order.addEventListener("click", () => {
