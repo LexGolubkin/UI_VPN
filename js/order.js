@@ -17,13 +17,20 @@ doing.addEventListener("click", () => {
     let params = new URLSearchParams(user_query);
     
     // Get query params
-    let user = params.get('user');
+    let user = JSON.parse(decodeURIComponent(params.get('user')));
+    let user_id = user.id;
+    let username = user.username;
+    let user_photo = user.photo_url;
+    let user_language = user.language_code;
 
 
-    document.getElementById('user_id').innerText = user;
-    console.log(user);
-    // document.getElementById('username').innerText = user.username;
-    alert(user);
+    alert('Привет ' + username);
+    document.getElementById('user_id').innerText = user_id;
+    document.getElementById('username').innerText = username;
+    var img = document.createElement("img");
+    img.src = user_photo;
+    var src = document.getElementById("user_photo");
+    src.appendChild(img);
     // document.getElementById("main").style.display = "none";
     // document.getElementById("form").style.display = "block";
     // document.getElementById("user_name").value = name
