@@ -24,9 +24,6 @@ window.addEventListener("load", () => {
     let user_photo = user.photo_url;
     let user_language = user.language_code;
 
-
-    alert('Привет ' + username);
-
     var img = document.createElement("img");
     img.src = user_photo;
     var src = document.getElementById("user_photo");
@@ -35,6 +32,10 @@ window.addEventListener("load", () => {
     document.getElementById('user_id').innerText = user_id;
     document.getElementById('username').innerText = username;
     document.getElementById('lang').innerText = user_language;
+});
+
+doing.addEventListener("click", () => {
+    alert('Привет ' + username);
 });
 
 order.addEventListener("click", () => {
