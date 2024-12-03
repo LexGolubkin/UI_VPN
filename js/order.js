@@ -13,8 +13,8 @@ tg.expand();
 // alert("Добро пожаловать в Shop");
 
 doing.addEventListener("click", () => {
-    let user = window.Telegram.WebAppUser;
-    document.getElementById('user_id').innerText = tg.initData.id;
+    let user = tg.initData;
+    document.getElementById('user_id').innerText = user;
     document.getElementById('username').innerText = user.username;
     alert(user.id, user.username);
     // document.getElementById("main").style.display = "none";
