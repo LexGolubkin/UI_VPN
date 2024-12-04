@@ -18,7 +18,8 @@ tg.expand();
 
 window.addEventListener("load", () => {
     let user_query = tg.initData;
-    console.log(user_query);       // string is URL-parameters
+    console.log("query - " + user_query);
+    console.log("queryType" + typeof user_query)       // string is URL-parameters
 
     if (user_query == null) {
         let sect = document.querySelector("#main_section");
