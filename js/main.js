@@ -46,10 +46,8 @@ window.addEventListener("load", () => {
         img.radius = "50px";
         sect.appendChild(img);
 
-        let user_info_id = document.createElement("h4");
-        user_info_id.textContent = "User ID";
-        sect.appendChild(user_info_id);
-        user_info_id.appendChild(user_id);
+        sect.appendChild(document.createElement("h4").textContent = "User ID");
+        sect.appendChild(document.createElement("p").textContent = user_id);
 
         let user_info_username = document.createElement("h4");
         user_info_username.textContent = "Username (tg)";
