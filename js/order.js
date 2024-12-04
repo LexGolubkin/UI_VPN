@@ -38,14 +38,17 @@ window.addEventListener("load", () => {
 
     let user_info_id = document.createElement("h4");
     user_info_id.textContent = "User ID";
+    sect.appendChild(user_info_id);
     user_info_id.appendChild(user_id);
 
     let user_info_username = document.createElement("h4");
     user_info_username.textContent = "Username (tg)";
+    sect.appendChild(user_info_username);
     user_info_username.appendChild(username);
 
     let user_info_lang = document.createElement("h4");
     user_info_lang.textContent = "User language";
+    sect.appendChild(user_info_lang);
     user_info_lang.appendChild(user_language);
 
     // document.querySelector('#user_id').textContent = user_id;
