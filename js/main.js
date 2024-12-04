@@ -18,6 +18,13 @@ tg.expand();
 
 window.addEventListener("load", () => {
     let user_query = tg.initData;       // string is URL-parameters
+    if (user_query == null) {
+        let sect = document.querySelector("#main_section");
+        let hi = document.createElement("p");
+        hi.textContent = 'Привет новый пользователь.';
+        sect.appendChild(hi);
+        return 0
+    } 
     let params = new URLSearchParams(user_query);
     
     // Get query params
