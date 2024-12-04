@@ -41,9 +41,9 @@ window.addEventListener("load", () => {
         let sect = document.querySelector("#main_section");
         let img = document.createElement("img");
         img.src = user_photo;
-        img.height = "100px";
-        img.width = "100px";
-        img.radius = "50px";
+        img.style.height = "100px";
+        img.style.width = "100px";
+        img.style.radius = "50px";
         sect.appendChild(img);
 
         sect.appendChild(document.createElement("h4").textContent = "User ID");
