@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
         let hi = document.createElement("p");
         hi.textContent = 'Привет новый пользователь.';
         sect.appendChild(hi);
-        return 0
+        return;
     } else {
         let params = new URLSearchParams(user_query);
         
