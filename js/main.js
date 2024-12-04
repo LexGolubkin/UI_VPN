@@ -46,11 +46,11 @@ window.addEventListener("load", () => {
         // img.style.radius = "50px";
         sect.appendChild(img);
 
-        // sect.appendChild(document.createElement("h4").textContent = "User ID");
-        // sect.appendChild(document.createElement("p").textContent = user_id);
+        sect.appendChild(document.createElement("h4")).textContent = "User ID";
+        sect.appendChild(document.createElement("p")).textContent = user_id;
 
         let user_info_username = document.createElement("h4");
-        user_info_username.textContent = "Username (tg)";
+        user_info_username.textContent = "Username:";
         let uiu_text = document.createElement("p");
         uiu_text.textContent = username;
         sect.appendChild(user_info_username);
