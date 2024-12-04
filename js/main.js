@@ -19,9 +19,9 @@ tg.expand();
 window.addEventListener("load", () => {
     let user_query = tg.initData;
     console.log("query - " + user_query);
-    console.log("queryType" + typeof user_query)       // string is URL-parameters
+    console.log("queryType " + typeof user_query)       // string is URL-parameters
 
-    if (user_query == null) {
+    if (user_query == "") {
         let sect = document.querySelector("#main_section");
         let hi = document.createElement("p");
         hi.textContent = 'Привет новый пользователь.';
