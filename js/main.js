@@ -81,5 +81,6 @@ order.addEventListener("click", () => {
 });
 
 close.addEventListener("click", () => {
+    tg.sendData("It Works!");
     tg.close();
 });
