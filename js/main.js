@@ -1,9 +1,5 @@
 let tg = window.Telegram.WebApp;
 
-let name = "";
-let email = "";
-let phone = "";
-// ########
 let user_id = '';
 let username = '';
 let user_photo = '';
@@ -14,6 +10,19 @@ let order = document.getElementById("order");
 let close = document.getElementById("close");
 
 tg.expand();
+
+const user_info_output = function (parentObj, info, tag) {
+    let user_info_tag = document.createElement("h4");
+    user_info_tag.textContent = tag;
+
+    let user_info = document.createElement("p");
+    user_info.textContent = info;
+
+    // user_info_tag.style.color;
+
+    parentObj.appendChild(user_info_tag);
+    parentObj.appendChild(user_info);
+};
 
 
 window.addEventListener("load", () => {
@@ -46,15 +55,16 @@ window.addEventListener("load", () => {
         // img.style.radius = "50px";
         sect.appendChild(img);
 
-        sect.appendChild(document.createElement("h4")).textContent = "User ID";
-        sect.appendChild(document.createElement("p")).textContent = user_id;
+        user_info_output(sect, user_id, "User Id:");
+        user_info_output(sect, username, "Username:");
+        user_info_output(sect, user_language, "Language:");
 
-        let user_info_username = document.createElement("h4");
-        user_info_username.textContent = "Username:";
-        let uiu_text = document.createElement("p");
-        uiu_text.textContent = username;
-        sect.appendChild(user_info_username);
-        sect.appendChild(uiu_text);
+        // let user_info_username = document.createElement("h4");
+        // user_info_username.textContent = "Username:";
+        // let uiu_text = document.createElement("p");
+        // uiu_text.textContent = username;
+        // sect.appendChild(user_info_username);
+        // sect.appendChild(uiu_text);
 
         // let user_info_lang = document.createElement("h4");
         // user_info_lang.textContent = "User language";
