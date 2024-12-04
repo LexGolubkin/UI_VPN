@@ -5,9 +5,9 @@ let username = '';
 let user_photo = '';
 let user_language = '';
 
-let doing = document.getElementById("doing");
-let order = document.getElementById("order");
-let close = document.getElementById("close");
+let doing = document.querySelector("#doing");
+let order = document.querySelector("#order");
+let close = document.querySelector("#close");
 
 tg.expand();
 
@@ -52,7 +52,7 @@ window.addEventListener("load", () => {
         img.src = user_photo;
         img.style.height = "100px";
         img.style.width = "100px";
-        img.style.radius = "50px";
+        img.style.borderRadius = "50px";
         sect.appendChild(img);
 
         user_info_output(sect, user_id, "User Id:");
@@ -77,13 +77,5 @@ order.addEventListener("click", () => {
 });
 
 close.addEventListener("click", () => {
-    // let data = {
-    //     name: name,
-    //     email: email,
-    //     phone: phone
-    // };
-
-    // tg.sendData(JSON.stringify(data));
-
     tg.close();
 });
