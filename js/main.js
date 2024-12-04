@@ -43,7 +43,7 @@ window.addEventListener("load", () => {
         img.src = user_photo;
         img.style.height = "100px";
         img.style.width = "100px";
-        img.style.radius = "50px";
+        // img.style.radius = "50px";
         sect.appendChild(img);
 
         sect.appendChild(document.createElement("h4").textContent = "User ID");
