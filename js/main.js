@@ -1,6 +1,5 @@
 let tg = window.Telegram.WebApp;
-let textColor = tg.themeParams.text_color;
-let bgColor = tg.themeParams.bg_color;
+// let textColor = tg.themeParams.text_color;
 
 let user_id = '';
 let username = '';
@@ -30,8 +29,7 @@ const user_info_output = function (parentObj, info, tag) {
 window.addEventListener("load", () => {
     // Init's
     let user_query = tg.initData;
-    document.body.style.color = textColor;
-    document.body.style.backgroundColor = bgColor;
+    // document.body.style.color = textColor;
     // log info
     console.log("query - " + user_query);
     console.log("queryType " + typeof user_query)       // string is URL-parameters
