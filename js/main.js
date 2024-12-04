@@ -46,18 +46,20 @@ window.addEventListener("load", () => {
         // img.style.radius = "50px";
         sect.appendChild(img);
 
-        sect.appendChild(document.createElement("h4").textContent = "User ID");
-        sect.appendChild(document.createElement("p").textContent = user_id);
+        // sect.appendChild(document.createElement("h4").textContent = "User ID");
+        // sect.appendChild(document.createElement("p").textContent = user_id);
 
         let user_info_username = document.createElement("h4");
         user_info_username.textContent = "Username (tg)";
+        let uiu_text = document.createElement("p");
+        uiu_text.textContent = username;
         sect.appendChild(user_info_username);
-        user_info_username.appendChild(username);
+        sect.appendChild(uiu_text);
 
-        let user_info_lang = document.createElement("h4");
-        user_info_lang.textContent = "User language";
-        sect.appendChild(user_info_lang);
-        user_info_lang.appendChild(user_language);
+        // let user_info_lang = document.createElement("h4");
+        // user_info_lang.textContent = "User language";
+        // sect.appendChild(user_info_lang);
+        // sect.appendChild(user_language);
 
         // document.querySelector('#user_id').textContent = user_id;
         // document.querySelector('#username').innerText = username;
