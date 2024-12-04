@@ -52,28 +52,12 @@ window.addEventListener("load", () => {
         img.src = user_photo;
         img.style.height = "100px";
         img.style.width = "100px";
-        // img.style.radius = "50px";
+        img.style.radius = "50px";
         sect.appendChild(img);
 
         user_info_output(sect, user_id, "User Id:");
         user_info_output(sect, username, "Username:");
         user_info_output(sect, user_language, "Language:");
-
-        // let user_info_username = document.createElement("h4");
-        // user_info_username.textContent = "Username:";
-        // let uiu_text = document.createElement("p");
-        // uiu_text.textContent = username;
-        // sect.appendChild(user_info_username);
-        // sect.appendChild(uiu_text);
-
-        // let user_info_lang = document.createElement("h4");
-        // user_info_lang.textContent = "User language";
-        // sect.appendChild(user_info_lang);
-        // sect.appendChild(user_language);
-
-        // document.querySelector('#user_id').textContent = user_id;
-        // document.querySelector('#username').innerText = username;
-        // document.querySelector('#lang').innerText = user_language;
     }
 });
 
@@ -93,13 +77,13 @@ order.addEventListener("click", () => {
 });
 
 close.addEventListener("click", () => {
-    let data = {
-        name: name,
-        email: email,
-        phone: phone
-    };
+    // let data = {
+    //     name: name,
+    //     email: email,
+    //     phone: phone
+    // };
 
-    tg.sendData(JSON.stringify(data));
+    // tg.sendData(JSON.stringify(data));
 
     tg.close();
 });
