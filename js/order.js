@@ -15,8 +15,6 @@ let close = document.getElementById("close");
 
 tg.expand();
 
-// alert("Добро пожаловать в Shop");
-
 
 window.addEventListener("load", () => {
     let user_query = tg.initData;       // string is URL-parameters
@@ -29,14 +27,30 @@ window.addEventListener("load", () => {
     user_photo = user.photo_url;
     user_language = user.language_code;
 
-    var img = document.createElement("img");
+    // Output Customer info if is a customer
+    let sect = document.querySelector("#main_section");
+    let img = document.createElement("img");
     img.src = user_photo;
-    var src = document.getElementById("user_photo");
-    src.appendChild(img);
+    img.height = "100px";
+    img.width = "100px";
+    img.radius = "50px";
+    sect.appendChild(img);
 
-    document.getElementById('user_id').innerText = user_id;
-    document.getElementById('username').innerText = username;
-    document.getElementById('lang').innerText = user_language;
+    let user_info_id = document.createElement("h4");
+    user_info_id.textContent = "User ID";
+    user_info_id.appendChild(user_id);
+
+    let user_info_username = document.createElement("h4");
+    user_info_username.textContent = "Username (tg)";
+    user_info_username.appendChild(username);
+
+    let user_info_lang = document.createElement("h4");
+    user_info_lang.textContent = "User language";
+    user_info_lang.appendChild(user_language);
+
+    // document.querySelector('#user_id').textContent = user_id;
+    // document.querySelector('#username').innerText = username;
+    // document.querySelector('#lang').innerText = user_language;
 });
 
 
